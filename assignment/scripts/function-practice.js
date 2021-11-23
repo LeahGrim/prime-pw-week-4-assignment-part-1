@@ -15,13 +15,12 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  console.log('Hello, ' + name);
-  return name;
+  return 'Hello, ' + name;
 }
 // Remember to call the function to test
-helloName('Leah');
-helloName('Anna');
-helloName('Rachel');
+console.log(helloName('Leah'));
+console.log(helloName('Anna'));
+console.log(helloName('Rachel'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -68,9 +67,9 @@ let friends = ['Darío', 'Danny', 'Dayanna'];
 function getLast( array ) {
   console.log('the list of names in the array are:', array);
   //returns and removes the last element from an Array
-  return friends.pop();
+  return array.pop();
 }
-console.log(getLast( friends ));
+console.log(getLast(friends));
 
 
 // 7. Function to find a value in an array. Return true if the
@@ -125,23 +124,31 @@ console.log(sumAll(numbersArray));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-let values= [21, 3, 2, 13];
+
 function sumPositives (numbers){
   let negatives = [];
   let sum = 0;
-  for (let i=0; i < numbers.length; i++) {
-    if (numbers[i] < 0){
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 0) {
       negatives.push(numbers[i]);
     } else {
       sum += numbers[i];
 }
 }
-console.log(negatives);
-return sum;
+return negatives;
 }
-let heresResult = sumPositives(-10, 12, 1, 12);
-console.log(sumPositives(heresResult));
+let heresResult = sumPositives(-12, 12, 1, 12);
+console.log(negatives);
+
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//create a function that calculates the area of width and height
+
+
+function getArea(width, height) {
+  let area = width * height;
+  return area;
+}
