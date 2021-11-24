@@ -124,23 +124,20 @@ console.log(sumAll(numbersArray));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+let gemsList = [0, 9, -8];
 function sumPositives (numbers){
-  let negatives = [];
+  let positives = [];
   let sum = 0;
   for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] < 0) {
-      negatives.push(numbers[i]);
-    } else {
-      sum += numbers[i];
+    if (numbers[i] >= 0) {
+      positives.push(numbers[i]);
+      }
+    }
+return positives;
 }
-}
-return negatives;
-}
-let heresResult = sumPositives(-12, 12, 1, 12);
-console.log(negatives);
-
-
+console.log(sumPositives([-10, -17,]));
+console.log(sumPositives(gemsList));
+//console.log(sumPositives());
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
